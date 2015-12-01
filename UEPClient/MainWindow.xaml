@@ -1,0 +1,41 @@
+﻿<Window x:Class="UEPClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UEPClient"
+        mc:Ignorable="d"
+        Title="UEP Controller Client" Height="350" Width="525">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="Import" Click="menuImportClick"/>
+                    <MenuItem Header="Export" Click="menuExportClick"/>
+                    <Separator />
+                    <MenuItem Header="Exit" Click="menuExitClick"/>
+                </MenuItem>
+                <MenuItem Header="Settings">
+                    <MenuItem Header="Server URL" Click="menuServerUrlClick"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel>
+                <Grid Height="300">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Beige" Text="TexBox" />
+                    <GridSplitter Grid.Row="0" Grid.Column="1" Margin="0,0,0,0"
+                  Width="1" Background="Gray" VerticalAlignment="Stretch" HorizontalAlignment="Center" />
+                    <ListView Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Aqua" />
+                </Grid>
+
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
