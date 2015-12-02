@@ -10,13 +10,15 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="File">
-                    <MenuItem Header="Import" Click="menuImportClick"/>
-                    <MenuItem Header="Export" Click="menuExportClick"/>
+                    <MenuItem Header="Open Event" Click="menuOpenEventClick"/>
+                    <MenuItem Header="Open Session" Click="menuOpenSessionClick"/>
                     <Separator />
                     <MenuItem Header="Exit" Click="menuExitClick"/>
                 </MenuItem>
                 <MenuItem Header="Settings">
                     <MenuItem Header="Server URL" Click="menuServerUrlClick"/>
+                    <Separator />
+                    <MenuItem Header="About..." Click="menuAboutClick"/>
                 </MenuItem>
             </Menu>
             <StackPanel>
@@ -29,10 +31,10 @@
                         <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <TextBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Beige" Text="TexBox" />
+                    <TextBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Goldenrod" Text="TexBox" MinWidth="50" />
                     <GridSplitter Grid.Row="0" Grid.Column="1" Margin="0,0,0,0"
-                  Width="1" Background="Gray" VerticalAlignment="Stretch" HorizontalAlignment="Center" />
-                    <ListView Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Aqua" />
+                  Width="3" Background="Gray" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+                    <ListView Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Aqua" MinWidth="50"/>
                 </Grid>
 
             </StackPanel>

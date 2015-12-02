@@ -1,0 +1,27 @@
+﻿<Window x:Class="UEPClient.FormSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UEPClient"
+        mc:Ignorable="d"
+        
+        Title="Settings" Height="300" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    
+    <Grid Margin="20" >
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"  />
+            <ColumnDefinition Width="Auto"  />
+        </Grid.ColumnDefinitions>
+        <Label Content="Server Base URL" Grid.Row="0" Grid.Column="0" />
+        <Label Content="Some other setting" Grid.Row="1" Grid.Column="0" />
+        <TextBox x:Name="textUrl" Grid.Row="0" Grid.Column="1" TextWrapping="NoWrap" Text="http://" VerticalAlignment="Top" Margin="5,5,5,5
+                 " Width="300" />
+        <TextBox x:Name="textSetting" Grid.Row="1" Grid.Column="1" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Margin="5" />
+    </Grid>
+</Window>

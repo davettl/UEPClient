@@ -27,14 +27,17 @@ namespace UEPClient
 
         private void menuServerUrlClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Current base URL is http://localhost:8080", "Base Url");
+            // MessageBox.Show("Current base URL is http://localhost:8080", "Base Url");
+            FormSettings formSettings = new FormSettings();
+            formSettings.Owner = this;
+            formSettings.ShowDialog();
         }
 
-        private void menuImportClick(object sender, RoutedEventArgs e)
+        private void menuOpenEventClick(object sender, RoutedEventArgs e)
         {
 
         }
-        private void menuExportClick(object sender, RoutedEventArgs e)
+        private void menuOpenSessionClick(object sender, RoutedEventArgs e)
         {
 
         }
@@ -42,5 +45,11 @@ namespace UEPClient
         {
             Application.Current.Shutdown();
         }
+        private void menuAboutClick(object sender, RoutedEventArgs e)
+        {
+            AboutUEPClient aboutWindow = new AboutUEPClient();
+            aboutWindow.ShowDialog();
+        }
+        
     }
 }
